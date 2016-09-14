@@ -1,0 +1,36 @@
+#!/bin/bash
+# chkconfig: 2345 95 05
+
+start(){
+echo "JBOSS starting"
+su -l jboss -c 'nohup /usr/share/jboss-6.1.0.Final/bin/run.sh -Djboss.bind.address=0.0.0.0 -Djboss.bind.address.management=0.0.0.0 &'
+}
+
+stop(){
+echo "JBOSS stopping"
+su -l jboss -c '/usr/share/jboss-6.1.0.Final/bin/shutdown.sh -u admin -p admin' 
+}
+
+restart(){
+stop
+sleep 5
+start
+}
+
+case "$1" in
+start)
+start
+;;
+stop)
+stop
+;;
+restart)
+restart
+;;
+*)
+echo "Usage: jboss {start|stop|restart}"
+exit 1
+
+esac
+
+exit
