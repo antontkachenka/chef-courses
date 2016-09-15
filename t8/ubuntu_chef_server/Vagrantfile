@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+#Vagrant.configure(2) do |config|
+#  config.vm.box = "ubuntu/trusty64"
+#  config.vm.network :private_network, ip: "192.168.100.21"
+#  config.vm.hostname = "chef-server"
+#  
+#  config.vm.provider "virtualbox" do |vb|
+#    vb = config.vm.hostname
+#    vb.memory = 2048
+#  end
+#
+#end
+
+Vagrant.configure("2") do |config|
+  config.vm.define "chef_server" do |chef_server|
+    chef_server.vm.box = "ubuntu/trusty64"
+    chef_server.vm.hostname = "chef-server"
+    chef_server.vm.network "private_network", ip: "192.168.10.21"
+    chef_server.vm.provider "virtualbox" do |cfg|
+      cfg.cpus = 1
+      cfg.memory = 2048
+    end
+  end
+end
