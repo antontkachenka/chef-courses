@@ -1,0 +1,22 @@
+{
+  "name": "Chef-dev",
+  "description": "",
+  "cookbook_versions": {
+
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "appurl": {
+      "application_repo": "http://www.cumulogic.com/download/Apps/hudson.zip"
+    },
+    "web_server_type": {
+      "nginx": "Nginx_web_server",
+      "apache": "Apache_web_server"
+    }
+  },
+  "override_attributes": {
+    "application_repo": "http://www.cumulogic.com/download/Apps/hudson.zip"
+  }
+}
+
