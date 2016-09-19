@@ -1,0 +1,3 @@
+I, [2016-09-19T21:02:57.944534 #32107]  INFO -- Kitchen: -----> Starting Kitchen (v1.13.0)
+I, [2016-09-19T21:02:58.342007 #32107]  INFO -- Kitchen: -----> Verifying <default-sbeliakou-centos-67-x86-64>...
+I, [2016-09-19T21:03:03.712937 #32107]  INFO -- Kitchen: -----> Kitchen is finished. (0m5.77s)

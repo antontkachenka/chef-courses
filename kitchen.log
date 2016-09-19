@@ -1,0 +1,26 @@
+-----> Starting Kitchen (v1.13.0)
+-----> Verifying <default-sbeliakou-centos-67-x86-64>...
+       Preparing files for transfer
+-----> Busser installation detected (busser)
+       Installing Busser plugins: busser-serverspec
+       Plugin serverspec already installed
+       Removing /tmp/verifier/suites/serverspec
+       Transferring files to <default-sbeliakou-centos-67-x86-64>
+-----> Running serverspec test suite
+       /opt/chef/embedded/bin/ruby -I/tmp/verifier/suites/serverspec -I/tmp/verifier/gems/gems/rspec-support-3.5.0/lib:/tmp/verifier/gems/gems/rspec-core-3.5.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/verifier/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/verifier/suites/serverspec
+       
+       22 port is listening
+       [32m  test port - success[0m
+       
+       Process "jenkins"
+         count
+       [32m    should eq 1[0m
+       
+       Jenkins URL
+       [32m  Jenkins URL available[0m
+       
+       Finished in 0.15163 seconds (files took 0.31011 seconds to load)
+       [32m3 examples, 0 failures[0m
+       
+       Finished verifying <default-sbeliakou-centos-67-x86-64> (0m3.90s).
+-----> Kitchen is finished. (0m4.29s)
